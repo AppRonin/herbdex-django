@@ -1,0 +1,22 @@
+/* background layer */
+.cover-image {
+  position: absolute;
+  height: 60vh;
+  inset: 0;
+  background: url("/static/images/herb-cover.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+
+.cover-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* content layer */
+.page-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}

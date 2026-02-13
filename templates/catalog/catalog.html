@@ -1,14 +1,88 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 
 <!-- Title -->
 {% block title %} Herbdex | Catalog {% endblock %}
 
+<!-- Static Files -->
+{% block static %}
+<link rel="stylesheet" href="{% static 'css/search_input.css' %}" />
+<link rel="stylesheet" href="{% static 'css/catalog.css' %}" />
+{% endblock %}
+
 <!-- Content -->
 {% block content %}
-<div
-  class="d-flex justify-content-center align-items-center"
-  style="height: 100vh"
->
-  <h1>Catalog</h1>
+
+<!-- Background Cover Image -->
+<div class="cover-image"></div>
+
+<!-- Foreground Content -->
+<div class="page-content d-flex p-2 p-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-7">
+        <!-- Title and Description -->
+        <h1 class="fs-2 text-light">Herbdex — Your Digital Apothecary</h1>
+        <p class="lead text-light">
+          Discover the healing power of herbs through a searchable apothecary
+          catalog. Find remedies by plant name or condition with ease.
+        </p>
+
+        <!-- Search Form -->
+        <form class="py-3 mb-5">
+          <div class="search-wrapper">
+            <div class="search-box">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search Herbs"
+              />
+              <button class="btn btn-primary search-button">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4">
+      {% for i in "1234" %}
+      <div class="col-12 col-sm-6 col-lg-3 mb-3">
+        <div class="card h-100 shadow-sm mx-auto">
+          <img
+            src="{% static 'images/testing/lavander.webp' %}"
+            class="card-img-top"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">Lavender</h5>
+            <p class="card-text text-secondary">
+              Smells amazing, looks elegant, and somehow makes stress pack its
+              bags and leave.
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <!-- Pagination -->
+      <nav aria-label="Catalog Pagination">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </div>
+
 {% endblock %}
