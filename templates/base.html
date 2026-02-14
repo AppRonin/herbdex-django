@@ -22,12 +22,15 @@
 
     <!-- Overall CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
 
     <!-- Static Files -->
     {% block static %} {% endblock %}
   </head>
 
   <body>
+    {% include 'includes/navbar.html' %}
+
     <!-- Content -->
     {% block content %} {% endblock %}
   </body>
