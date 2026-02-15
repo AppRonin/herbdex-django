@@ -2,7 +2,9 @@
 .cover-image {
   position: absolute;
   height: 60vh;
-  inset: 0;
+  top: 75px;      /* push below navbar */
+  left: 0;
+  right: 0;
   background: url("/static/images/herb-cover.jpg") center/cover no-repeat;
   z-index: 1;
 }
