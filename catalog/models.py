@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Herb(models.Model):
@@ -10,6 +11,9 @@ class Herb(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    def get_url(self):
+        return reverse('herb_detail', args=[self.slug])
+
     class Meta:
         ordering = ["name"]
     
