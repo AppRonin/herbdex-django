@@ -10,12 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'created_at', 'updated_at')
 
 class MedicalUseAdmin(admin.ModelAdmin):
-    list_display = ('name', 'get_herbs', 'created_at', 'updated_at')
-
-    def get_herbs(self, obj):
-        return ", ".join([h.name for h in obj.herbs.all()])
-
-    get_herbs.short_description = "Herbs"
+    list_display = ('name', 'herb', 'created_at', 'updated_at')
 
 admin.site.register(Herb, HerbAdmin)
 admin.site.register(Category, CategoryAdmin)

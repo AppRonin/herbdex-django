@@ -76,26 +76,15 @@
       <section class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
           <h4 class="mb-3">Medicinal Uses</h4>
-
           <div class="row g-3">
+            {% for medical_use in medical_uses %}
             <div class="col-md-6 d-flex">
               <div class="p-3 bg-light rounded h-100 w-100">
-                <strong>Burns</strong>
-                <p class="mb-0 small">
-                  Both superficial(first degree) and serious(second and third
-                  degree).
-                </p>
+                <strong>{{ medical_use.name }}</strong>
+                <p class="mb-0 small">{{ medical_use.observation }}</p>
               </div>
             </div>
-
-            <div class="col-md-6 d-flex">
-              <div class="p-3 bg-light rounded h-100 w-100">
-                <strong>Insect Bites</strong>
-                <p class="mb-0 small">
-                  Mosquito bites and other minor insect stings
-                </p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </section>

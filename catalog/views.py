@@ -11,7 +11,8 @@ def catalog(request):
 
 def herb_detail(request, herb_slug):
     herb = get_object_or_404(Herb, slug=herb_slug)
+    medical_uses = herb.medical_uses.all()
 
-    context = {'herb': herb}
+    context = {'herb': herb, 'medical_uses': medical_uses}
 
     return render(request, 'catalog/herb_detail.html', context)

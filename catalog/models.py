@@ -37,9 +37,15 @@ class Herb(models.Model):
 class MedicalUse(models.Model):
     name = models.CharField(max_length=50)
     observation = models.TextField(blank=True)
-    herbs = models.ManyToManyField(Herb, related_name="medical_uses")
+    herb = models.ForeignKey(Herb, on_delete=models.CASCADE, related_name="medical_uses")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        # avoids duplications in same herb
+        unique_together = ("name", "herb")
+
     def __str__(self):
-        return self.name
+        return "f{self.name} ({self.herb.NAME})"
+    
+    
