@@ -40,12 +40,12 @@
           <ul class="list-unstyled mb-0">
             <li class="mb-2">
               <small class="text-muted">Scientific Name</small><br />
-              <strong>{{ herb.slug }}</strong>
+              <strong>{{ herb.scientific_name }}</strong>
             </li>
 
             <li class="mb-2">
               <small class="text-muted">Category</small><br />
-              Plant
+              {{ herb.category.name }}
             </li>
 
             <li class="mb-2">
@@ -68,7 +68,7 @@
       <article class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
           <h3 class="mb-3">Overview</h3>
-          <p class="lead mb-0">{{ herb.description }}</p>
+          <p class="lead mb-0">{{ herb.overview }}</p>
         </div>
       </article>
 
