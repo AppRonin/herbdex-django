@@ -18,7 +18,7 @@ class Herb(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     scientific_name = models.CharField(max_length=100)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="herbs")
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="herbs")
     overview = models.TextField(blank=True)
     catalog_image = models.ImageField(upload_to='images/herbs/catalog', blank=True, null=True)
     detail_image = models.ImageField(upload_to='images/herbs/detail', blank=True, null=True)
@@ -31,5 +31,15 @@ class Herb(models.Model):
     class Meta:
         ordering = ["name"]
     
+    def __str__(self):
+        return self.name
+    
+class MedicalUse(models.Model):
+    name = models.CharField(max_length=50)
+    observation = models.TextField(blank=True)
+    herbs = models.ManyToManyField(Herb, related_name="medical_uses")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return self.name
