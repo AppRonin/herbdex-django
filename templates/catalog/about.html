@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- title -->
+{% block title %} Herbdex | About {%endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">About Herbdex</h1>
+        <p class="lead text-muted">
+          A digital apothecary and searchable herb catalog.
+        </p>
+      </div>
+
+      <!-- Main Card -->
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h4 class="mb-3">What is Herbdex?</h4>
+          <p>
+            <strong>Herbdex</strong> is a searchable catalog of medicinal herbs,
+            created as a digital apothecary to organize and store knowledge
+            about natural remedies, traditional uses, and plant-based
+            treatments.
+          </p>
+
+          <p>
+            The goal is simple: make it easy to look up herbs by
+            <strong>name</strong> or by <strong>illness/medical use</strong>,
+            and keep structured notes about what each herb can do.
+          </p>
+        </div>
+      </div>
+
+      <!-- Purpose -->
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
+          <h4 class="mb-3">Purpose</h4>
+
+          <p class="mb-2">
+            This project was built as a personal learning tool — a place to
+            store, review, and expand knowledge about medicinal herbs over time.
+          </p>
+
+          <p class="mb-0">
+            It works like a growing notebook: each herb added represents
+            something studied, reviewed, or researched.
+          </p>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="alert alert-warning border-0 shadow-sm">
+        <strong>Disclaimer:</strong>
+        This catalog is for educational purposes only and does not replace
+        professional medical advice, diagnosis, or treatment.
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

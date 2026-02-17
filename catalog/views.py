@@ -16,3 +16,6 @@ def herb_detail(request, herb_slug):
     context = {'herb': herb, 'medical_uses': medical_uses}
 
     return render(request, 'catalog/herb_detail.html', context)
+
+def about(request):
+    return render(request, 'catalog/about.html')
