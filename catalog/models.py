@@ -36,7 +36,6 @@ class Herb(models.Model):
     
 class MedicalUse(models.Model):
     name = models.CharField(max_length=50)
-    observation = models.TextField(blank=True)
     herb = models.ForeignKey(Herb, on_delete=models.CASCADE, related_name="medical_uses")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -46,6 +45,13 @@ class MedicalUse(models.Model):
         unique_together = ("name", "herb")
 
     def __str__(self):
-        return "f{self.name} ({self.herb.NAME})"
+        return f"{self.name} ({self.herb.name})"
     
+class Observation(models.Model):
+    content = models.TextField(blank=True)
+    medical_use = models.ForeignKey(MedicalUse, on_delete=models.CASCADE,related_name="observations")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
+    def __str__(self):
+        return f"Observation for {self.medical_use.name}"

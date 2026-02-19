@@ -77,11 +77,16 @@
         <div class="card-body p-4">
           <h4 class="mb-3">Medicinal Uses</h4>
           <div class="row g-3">
-            {% for medical_use in medical_uses %}
+            {% for medical_use in herb.medical_uses.all %}
             <div class="col-md-6 d-flex">
-              <div class="p-3 bg-light rounded h-100 w-100">
+              <div class="p-3 bg-light rounded w-100">
                 <strong>{{ medical_use.name }}</strong>
-                <p class="mb-0 small">{{ medical_use.observation }}</p>
+
+                <ul class="mb-0">
+                  {% for obs in medical_use.observations.all %}
+                  <li class="mb-0 small">{{ obs.content }}</li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
             {% endfor %}
