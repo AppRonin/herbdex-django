@@ -2,10 +2,12 @@ from django.shortcuts import render, get_object_or_404
 from .models import Herb
 
 from django.db.models import Q
+from django.core.paginator import Paginator
 
-# Create your views here.
+
 def catalog(request):
     search_input = request.GET.get("search_input")
+    page_number = request.GET.get("page")
 
     herbs = Herb.objects.all()
 
@@ -15,7 +17,13 @@ def catalog(request):
             Q(medical_uses__name__icontains=search_input)
         ).distinct()
 
-    context = {"herbs": herbs}
+    paginator = Paginator(herbs, 8)  # 8 herbs per page
+    page_obj = paginator.get_page(page_number)
+
+    context = {        
+        "page_obj": page_obj,
+        "search_input": search_input
+        }
     
     return render(request, "catalog/catalog.html", context)
 
