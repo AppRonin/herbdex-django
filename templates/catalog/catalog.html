@@ -28,11 +28,15 @@
         </p>
 
         <!-- Search Form -->
-        <form class="py-3 mb-5">
+        <form method="GET" action="{% url 'catalog' %}" class="py-3 mb-5">
+          {% csrf_token %}
           <div class="search-wrapper">
             <div class="search-box">
               <i class="fas fa-search search-icon"></i>
               <input
+                id="search_input"
+                name="search_input"
+                value="{{ request.GET.search_input }}"
                 type="text"
                 class="form-control search-input"
                 placeholder="Search Herbs"
@@ -46,28 +50,6 @@
 
     <!-- Cards -->
     <div class="row g-4">
-      <div class="col-12 col-sm-6 col-lg-3 mb-4">
-        <div class="card h-100 shadow-sm mx-auto">
-          <div class="ratio ratio-1x1">
-            <img
-              src="{% static 'images/testing/lavander.webp' %}"
-              class="card-img-top object-fit-cover"
-            />
-          </div>
-
-          <div class="card-body">
-            <h5 class="card-title">Lavender</h5>
-            <p class="card-text text-secondary">
-              Smells amazing, looks elegant, and somehow makes stress pack its
-              bags and leave.
-            </p>
-
-            <!-- Makes whole card clickable-->
-            <a href="#" class="stretched-link"></a>
-          </div>
-        </div>
-      </div>
-
       {% for herb in herbs %}
       <div class="col-12 col-sm-6 col-lg-3 mb-4">
         <div class="card h-100 shadow-sm mx-auto">
