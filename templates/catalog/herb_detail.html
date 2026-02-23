@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load static %} {% load i18n %}
 
 <!-- Title -->
 {% block title %} Herbdex | {{ herb.name }} {% endblock %}
@@ -14,7 +14,9 @@
 <section class="cover-image text-light mb-4">
   <div class="container py-5">
     <h1 class="fw-bold mb-2 display-5">{{ herb.name }}</h1>
-    <p class="lead opacity-75 mb-0">Botanical Encyclopedia Entry</p>
+    <p class="lead opacity-75 mb-0">
+      {% trans "Botanical Encyclopedia Entry" %}
+    </p>
   </div>
 </section>
 
@@ -35,26 +37,27 @@
       <!-- Quick Facts -->
       <div class="card shadow-sm border-0 mb-4">
         <div class="card-body">
-          <h5 class="border-bottom pb-2 mb-3">Quick Facts</h5>
+          <h5 class="border-bottom pb-2 mb-3">{% trans "Quick Facts" %}</h5>
 
           <ul class="list-unstyled mb-0">
             <li class="mb-2">
-              <small class="text-muted">Scientific Name</small><br />
+              <small class="text-muted">{% trans "Scientific Name" %}</small
+              ><br />
               <strong>{{ herb.scientific_name }}</strong>
             </li>
 
             <li class="mb-2">
-              <small class="text-muted">Category</small><br />
+              <small class="text-muted">{% trans "Category" %}</small><br />
               {{ herb.category.name }}
             </li>
 
             <li class="mb-2">
-              <small class="text-muted">Created</small><br />
+              <small class="text-muted">{% trans "Created" %}</small><br />
               {{ herb.created_at|date:"M d, Y" }}
             </li>
 
             <li>
-              <small class="text-muted">Updated</small><br />
+              <small class="text-muted">{% trans "Updated" %}</small><br />
               {{ herb.updated_at|date:"M d, Y" }}
             </li>
           </ul>
@@ -67,7 +70,7 @@
       <!-- Overview -->
       <article class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
-          <h3 class="mb-3">Overview</h3>
+          <h3 class="mb-3">{% trans "Overview" %}</h3>
           <p class="lead mb-0">{{ herb.overview }}</p>
         </div>
       </article>
@@ -75,7 +78,7 @@
       <!-- Medicinal Uses -->
       <section class="card shadow-sm border-0 mb-4">
         <div class="card-body p-4">
-          <h4 class="mb-3">Medicinal Uses</h4>
+          <h4 class="mb-3">{% trans "Medicinal Uses" %}</h4>
           <div class="row g-3">
             {% for medical_use in herb.medical_uses.all %}
             <div class="col-md-6 d-flex">

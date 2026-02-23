@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-23 17:38-0300\n"
+"POT-Creation-Date: 2026-02-23 20:40-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1282,8 +1282,7 @@ msgstr "O que é o Herbdex"
 #: .\templates\catalog\about.html:24
 msgid ""
 "is a searchable catalog of\n"
-"            medicinal herbs, created as a digital herbarium to organize "
-"and\n"
+"            medicinal herbs, created as a digital herbarium to organize and\n"
 "            store knowledge about natural remedies, traditional uses, and\n"
 "            plant-based treatments. "
 msgstr ""
@@ -1396,6 +1395,38 @@ msgstr "Buscar Ervas"
 #: .\templates\catalog\catalog.html:48
 msgid "Search"
 msgstr "Pesquisar"
+
+#: .\templates\catalog\herb_detail.html:18
+msgid "Botanical Encyclopedia Entry"
+msgstr "Entrada da Enciclopédia Botânica"
+
+#: .\templates\catalog\herb_detail.html:40
+msgid "Quick Facts"
+msgstr "Informações Rápidas"
+
+#: .\templates\catalog\herb_detail.html:44
+msgid "Scientific Name"
+msgstr "Nome Científico"
+
+#: .\templates\catalog\herb_detail.html:50
+msgid "Category"
+msgstr "Categoria"
+
+#: .\templates\catalog\herb_detail.html:55
+msgid "Created"
+msgstr "Criado em"
+
+#: .\templates\catalog\herb_detail.html:60
+msgid "Updated"
+msgstr "Atualizado em"
+
+#: .\templates\catalog\herb_detail.html:73
+msgid "Overview"
+msgstr "Visão Geral"
+
+#: .\templates\catalog\herb_detail.html:81
+msgid "Medicinal Uses"
+msgstr "Usos Medicinais"
 
 #: .\templates\includes\navbar.html:25 .\templates\includes\navbar.html:54
 msgid "Catalog"
