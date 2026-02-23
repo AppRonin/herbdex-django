@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% load i18n %}
 
 <!-- Title -->
-{% block title %} Herbdex | Catalog {% endblock %}
+{% block title %} {% trans "Herbdex | Catalog" %} {% endblock %}
 
 <!-- Static Files -->
 {% block static %}
@@ -22,12 +22,12 @@
       <div class="col-12 col-sm-10 col-lg-7">
         <!-- Title and Description -->
         <h1 class="fs-2 text-light">
-          {% trans "Herbdex — Your Digital Apothecary" %}
+          {% trans "Herbdex — Your Digital Herbarium" %}
         </h1>
         <p class="lead text-light">
           {% blocktrans %} Discover the healing power of herbs through a
-          searchable apothecary catalog. Find remedies by plant name or
-          condition with ease. {% endblocktrans %}
+          searchable herbarium catalog. Find remedies by plant name or condition
+          with ease. {% endblocktrans %}
         </p>
 
         <!-- Search Form -->
