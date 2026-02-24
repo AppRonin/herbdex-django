@@ -1,23 +1,25 @@
+import catalog.translation
+
 from django.contrib import admin
 from .models import Herb, Category, MedicalUse, Observation
 
+from modeltranslation.admin import TranslationAdmin
+
 # Register your models here.
-class HerbAdmin(admin.ModelAdmin):
+@admin.register(Herb)
+class HerbAdmin(TranslationAdmin):
     prepopulated_fields = {'slug': ('name',)}
     list_display = ('name', 'slug', 'created_at', 'updated_at')
 
-class CategoryAdmin(admin.ModelAdmin):
+@admin.register(Category)
+class CategoryAdmin(TranslationAdmin):
     list_display = ('name', 'created_at', 'updated_at')
 
-class MedicalUseAdmin(admin.ModelAdmin):
+@admin.register(MedicalUse)
+class MedicalUseAdmin(TranslationAdmin):
     list_display = ('name', 'herb', 'created_at', 'updated_at')
 
-class ObservationAdmin(admin.ModelAdmin):
+@admin.register(Observation)
+class ObservationAdmin(TranslationAdmin):
     list_display = ("medical_use", "content")
     search_fields = ("content", "medical_use__name", "medical_use__herb__name")
-
-
-admin.site.register(Herb, HerbAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(MedicalUse, MedicalUseAdmin)
-admin.site.register(Observation, ObservationAdmin)
