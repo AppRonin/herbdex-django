@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-23 20:40-0300\n"
+"POT-Creation-Date: 2026-02-24 19:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1263,6 +1263,61 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:14
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:54
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:62
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:72
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:82
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:86
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:118
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:137
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:364
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:369
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:379
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:399
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:416
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:435
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:441
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:458
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:470
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:478
+msgid "title"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:18
+msgid "password"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:245
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:264
+msgid "title a"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:249
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:275
+msgid "title b"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:253
+msgid "title c"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:257
+msgid "title d"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\models.py:380
+msgid "visits"
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\tests\translation.py:62
+msgid "Sorry, translation is not available."
+msgstr ""
+
+#: .\env\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr ""
+
 #: .\templates\catalog\about.html:4
 msgid "Herbdex | About"
 msgstr "Herbdex | Sobre"
@@ -1380,9 +1435,8 @@ msgstr "Herbdex — Seu Herbário Digital"
 #: .\templates\catalog\catalog.html:28
 msgid ""
 " Discover the healing power of herbs through a\n"
-"          searchable herbarium catalog. Find remedies by plant name or "
-"condition\n"
-"          with ease. "
+"          searchable catalog. Find remedies by plant name or condition with\n"
+"          ease. "
 msgstr ""
 "Descubra o poder medicinal das ervas em um catálogo pesquisavel. Encontre "
 "tratamentos por herva ou\n"
